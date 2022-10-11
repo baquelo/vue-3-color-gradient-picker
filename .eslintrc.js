@@ -7,6 +7,5 @@ module.exports = {
         'eslint:recommended',
     ],
     rules: {
-        "vue/no-multiple-template-root": "off"
     }
 }

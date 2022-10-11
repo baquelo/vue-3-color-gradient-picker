@@ -1,52 +1,32 @@
 <template>
   <div id="app" :style="{ display: 'flex', textAlign: 'center' }">
     <div>
-      <ColorPicker
-          :color="color"
-          :onStartChange="color => onChange(color, 'start')"
-          :onChange="color => onChange(color, 'change')"
-          :onEndChange="color => onChange(color, 'end')"
-      />
+      <ColorPicker :color="color" :onStartChange="color => onChange(color, 'start')"
+        :onChange="color => onChange(color, 'change')" :onEndChange="color => onChange(color, 'end')" />
     </div>
     <div>
-      <ColorPicker
-          :is-gradient="true"
-          :onStartChange="color => onChange(color, 'start')"
-          :onChange="color => onChange(color, 'change')"
-          :onEndChange="color => onChange(color, 'end')"
-      />
+      <ColorPicker :is-gradient="true" :onStartChange="color => onChange(color, 'start')"
+        :onChange="color => onChange(color, 'change')" :onEndChange="color => onChange(color, 'end')" />
     </div>
   </div>
 </template>
 
-<script>
-import ColorPicker from '@/lib/components/ColorPicker.vue';
+<script setup>
+import ColorPicker from '@/components';
+import { ref } from 'vue';
 
-export default {
-  name: 'App',
-  components: {
-    ColorPicker
-  },
+const color = ref({
+  red: 255,
+  green: 0,
+  blue: 0,
+  alpha: 1
+});
 
-  data() {
-    return {
-      color: {
-        red: 255,
-        green: 0,
-        blue: 0,
-        alpha: 1
-      }
-    };
-  },
-
-  methods: {
-    onChange(attrs, name) {
-      this.color = { ...attrs };
-
-      console.log(attrs, name);
-    }
-  }
+function onChange (attrs, name) {
+  this.color = { ...attrs };
 }
 </script>
 
-<style src="@/lib/index.scss" lang="scss" />
+
+
+<style src="@/index.scss" lang="scss" />

@@ -3,9 +3,6 @@
         "baseUrl": "./src",
         "paths": {
             "~/*": ["*"]
-        },
-        "vueCompilerOptions": {
-            "target": 2
-        },
+        }
     },
 }
