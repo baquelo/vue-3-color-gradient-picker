@@ -1,4 +1,4 @@
-import GradientPoint from './GradientPoint';
+import GradientPoint from './GradientPoint/IndexComponent.vue';
 
 import { generateGradientStyle, updateGradientActivePercent } from "@/lib/helpers";
 

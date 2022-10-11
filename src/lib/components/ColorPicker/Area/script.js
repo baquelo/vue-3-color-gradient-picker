@@ -1,8 +1,8 @@
-import Picker from "./Picker";
-import Preview from "./Preview";
-import Hue from "./Hue";
-import Alpha from "./Alpha";
-import GradientPoints from "./GradientPoints";
+import Picker from "./Picker/IndexComponent.vue";
+import Preview from "./Preview/IndexComponent.vue";
+import Hue from "./Hue/IndexComponent.vue";
+import Alpha from "./Alpha/IndexComponent.vue";
+import GradientPoints from "./GradientPoints/IndexComponent.vue";
 
 export default {
     name: "Area",

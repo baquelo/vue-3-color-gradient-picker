@@ -1,5 +1,5 @@
-import Hex from './Hex';
-import RGB from './RGB';
+import Hex from './Hex/IndexComponent.vue';
+import RGB from './RGB/IndexComponent.vue';
 
 export default {
     name: "Preview",

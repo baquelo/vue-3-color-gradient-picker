@@ -1,5 +1,5 @@
-import Area from '../Area';
-import Preview from '../Preview';
+import Area from '../Area/IndexComponent.vue';
+import Preview from '../Preview/IndexComponent.vue';
 
 import { rgbToHsv, getRightValue, generateSolidStyle } from '@/lib/helpers';
 

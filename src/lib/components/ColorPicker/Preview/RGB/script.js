@@ -1,4 +1,4 @@
-import RGBItem from './RGBItem';
+import RGBItem from './RGBItem/IndexComponent.vue';
 import { rgbToHsv } from "@/lib/helpers";
 
 export default {

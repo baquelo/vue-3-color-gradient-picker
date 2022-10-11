@@ -1,6 +1,6 @@
-import GradientControls from './GradientControls';
-import Preview from '../Preview';
-import Area from '../Area';
+import GradientControls from './GradientControls/IndexComponent.vue';
+import Preview from '../Preview/IndexComponent.vue';
+import Area from '../Area/IndexComponent.vue';
 
 import { getRightValue, rgbToHsv, generateGradientStyle } from "@/lib/helpers";
 

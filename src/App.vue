@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ColorPicker } from './lib'
+import ColorPicker from '@/lib/components/ColorPicker.vue';
 
 export default {
   name: 'App',

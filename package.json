@@ -17,17 +17,16 @@
     "url": "https://github.com/arthay/vue-color-gradient-picker/issues"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "rimraf dist && rollup -c",
-    "build:demo": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build:demo": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
-    "vue-fragment": "^1.5.1"
   },
   "peerDependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^3.2.40"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.0",
@@ -36,13 +35,9 @@
     "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@rollup/plugin-node-resolve": "^8.0.0",
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.6.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "@vitejs/plugin-vue": "^3.1.2",
+    "eslint": "8.25.0",
+    "eslint-plugin-vue": "9.6.0",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.14.1",
     "rollup": "^2.10.5",
@@ -51,10 +46,12 @@
     "rollup-plugin-scss": "^2.5.0",
     "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-vue": "^5.1.9",
-    "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vite": "^3.1.7",
+    "vue": "^3.2.40",
+    "@vue/compat": "^3.2.40",
+    "@vue/compiler-sfc": "^3.2.40",
+    "@volar-plugins/vetur": "latest"
   },
   "eslintConfig": {
     "root": true,
@@ -62,12 +59,10 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-recommended",
       "eslint:recommended"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
+    "parserOptions": {},
     "rules": {}
   },
   "browserslist": [
